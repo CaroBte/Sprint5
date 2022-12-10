@@ -13,4 +13,3 @@ const getData = () => {
     const div = document.getElementById("newDate");
     div.innerHTML = `La fecha seleccionada es: ${fecha}`
 } */
-
