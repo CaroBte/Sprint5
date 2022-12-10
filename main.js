@@ -1,28 +1,28 @@
 console.log("Hello world");
+console.log(new Date);
 
 const getData = () => {
-    const btn = document.getElementById("btn")
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const date = document.querySelector("#date").value;
-        console.log(date);
-    })
+    const date = document.querySelector("#date").value;
+    const inputDate = new Date(date);
+    const actualDate = new Date();
+    updateCountdown(inputDate - actualDate)
 }
-
-/* const showData = (fecha) => {
-    const div = document.getElementById("newDate");
-    div.innerHTML = `La fecha seleccionada es: ${fecha}`
-} */
 
 const months = document.getElementById("months");
 const days = document.getElementById("days");
 const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
-const actualDate = new Date();
-const countdownDate = new Date(2022 - 12 - 31)
-const remainTime = actualDate - countdownDate;
 
-console.log(`The actual date is: ${actualDate}`);
-console.log(`The countdown date is: ${countdownDate}`)
-console.log(`The remaining time is: ${remainTime}`)
+const updateCountdown = (remainTime) => {
+    const months = Math.floor(remainTime / 1000 / 60 / 60 / 24 / 30)
+    console.log(`Months: ${months}`);
+    const days = Math.floor(remainTime / 1000 / 60 / 60 / 24) % 30
+    console.log(`Days: ${days}`);
+    const hours = Math.floor(remainTime / 1000 / 60 / 60)
+    console.log(`Hours: ${hours}`);
+    const minutes = Math.floor(remainTime / 1000 / 60) % 60
+    console.log(`Minutes: ${minutes}`);
+    const seconds = Math.floor(remainTime / 1000) % 60
+    console.log(`Seconds: ${seconds}`);
+}
