@@ -1,3 +1,4 @@
+console.log("Hola Mundo");
 
 const getData = () => {
     const btn = document.getElementById("btn")
@@ -7,3 +8,4 @@ const getData = () => {
         console.log(fecha)
     })
 }
+
