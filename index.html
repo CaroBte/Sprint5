@@ -19,13 +19,35 @@
 
 <body>
 
-    <div id="formDate" class="contain mx-auto d-flex flex-column bg-light">
+    <div id="formDate" class="contain d-flex flex-column bg-light">
         <h5 class="mx-auto mt-5">Hello Countdown</h5>
-        <form id="form" class="d-flex flex-column m-5" action="">
+        <form id="form" class="d-flex flex-column m-5">
             <input class="mx-auto" id="date" type="date">
+            <div id="newDate"></div>
             <button id="btn" class="btn btn-outline-primary mx-auto mt-4" onclick="getData()"
                 type="button">Enviar</button>
         </form>
+    </div>
+
+    <div id="contdown" class="d-flex flex-row flex-wrap">
+        <div class="d-flex flex-column" id="months">
+            <p class="card-title"></p>
+            <p class="card-text"></p>
+        </div>
+        <div class="d-flex flex-column" id="hours">
+            <p class="card-title"></p>
+            <p class="card-text"></p>
+        </div>
+        <div class="d-flex flex-column" id="minutes">
+            <p class="card-title"></p>
+            <p class="card-text"></p>
+        </div>
+        <div class="d-flex flex-column" id="seconds">
+            <p class="card-title"></p>
+            <p class="card-text"></p>
+        </div>
+
+
     </div>
 
 </body>
