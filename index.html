@@ -21,14 +21,14 @@
 
     <div id="form-date" class="contain d-flex flex-column">
         <h2 class="mx-auto mt-5">WE'RE LAUNCHING SOON</h2>
-        <form id="form" class="d-flex flex-column m-5">
+        <form id="form" class="d-flex flex-column m-3">
             <input class="mx-auto" id="date" type="date">
             <div id="newDate"></div>
             <button id="btn" class="btn btn-dark mx-auto mt-4" onclick="getDate()" type="button">Send</button>
         </form>
     </div>
 
-    <div id="count-down" class="d-flex flex-row flex-wrap pt-5 justify-content-center">
+    <div id="count-down" class="d-flex flex-row flex-nowrap pt-5 justify-content-center">
         <div class="div-cards d-flex flex-column align-items-center">
             <h2 class="card-title" id="months">00</h2>
             <h6 class="card-text">Months</h6>
@@ -51,6 +51,9 @@
         </div>
     </div>
 
+    <footer class="d-flex justify-content-center">
+        <img id="hills" src="./styles/hills.svg">
+    </footer>
 </body>
 
 <script src="./main.js"></script>
