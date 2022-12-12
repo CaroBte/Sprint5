@@ -5,6 +5,7 @@ const daysDiv = document.getElementById("days");
 const hoursDiv = document.getElementById("hours");
 const minutesDiv = document.getElementById("minutes");
 const secondsDiv = document.getElementById("seconds");
+let interval
 
 const updateCountdown = (remainTime) => {
     const months = Math.floor(remainTime / 1000 / 60 / 60 / 24 / 30)
@@ -21,12 +22,12 @@ const updateCountdown = (remainTime) => {
 }
 
 const getDate = () => {
-
+    clearInterval(interval) //Stops interval
     const inputDate = document.querySelector("#date").value;
     console.log(inputDate);
     const date = new Date(`${inputDate}T00:00:00`);
 
-    setInterval(() => {
+    interval = setInterval(() => {
         const actualDate = new Date();
         updateCountdown(date - actualDate)
     }, 1000)
