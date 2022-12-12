@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Red+Hat+Text:wght@500&display=swap');
+
+* {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+:root {
+    --card-bg-dark: #2C2C42;
+    --card-bg-light: #34364F;
+    --card-text-dark: #D45072;
+    --card-text-light: #FA5E83;
+}
+
+#count-down {
+    gap: 2rem;
+}
+
+#form-date {
+    background-color: #4a4161;
+}
+
+body {
+    background-color: #211D2B;
+    color: white;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 4rem;
+    color: #D45072;
+    background-color: #34364F;
+    padding: 1.5rem;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+}

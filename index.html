@@ -19,36 +19,35 @@
 
 <body>
 
-    <div id="formDate" class="contain d-flex flex-column bg-light">
-        <h2 class="mx-auto mt-5">Hello Countdown</h2>
+    <div id="form-date" class="contain d-flex flex-column">
+        <h2 class="mx-auto mt-5">WE'RE LAUNCHING SOON</h2>
         <form id="form" class="d-flex flex-column m-5">
             <input class="mx-auto" id="date" type="date">
             <div id="newDate"></div>
-            <button id="btn" class="btn btn-outline-primary mx-auto mt-4" onclick="getDate()"
-                type="button">Send</button>
+            <button id="btn" class="btn btn-dark mx-auto mt-4" onclick="getDate()" type="button">Send</button>
         </form>
     </div>
 
-    <div id="contdown" class="d-flex flex-row flex-wrap justify-content-around mt-5">
-        <div class="d-flex flex-column align-items-center">
-            <h3 class="card-title">Months</h3>
-            <h4 class="card-text" id="months">00</h4>
+    <div id="count-down" class="d-flex flex-row flex-wrap pt-5 justify-content-center">
+        <div class="div-cards d-flex flex-column align-items-center">
+            <h2 class="card-title" id="months">00</h2>
+            <h6 class="card-text">Months</h6>
         </div>
-        <div class="d-flex flex-column align-items-center">
-            <h3 class="card-title">Days</h3>
-            <h4 class="card-text" id="days">00</h4>
+        <div class="div-cards d-flex flex-column align-items-center">
+            <h2 class="card-title" id="days">00</h2>
+            <h6 class="card-text">Days</h6>
         </div>
-        <div class="d-flex flex-column align-items-center">
-            <h3 class="card-title">Hours</h3>
-            <h4 class="card-text" id="hours">00</h4>
+        <div class="div-cards d-flex flex-column align-items-center">
+            <h2 class="card-title" id="hours">00</h2>
+            <h6 class="card-text">Hours</h6>
         </div>
-        <div class="d-flex flex-column align-items-center">
-            <h3 class="card-title">Minutes</h3>
-            <h4 class="card-text" id="minutes">00</h4>
+        <div class="div-cards d-flex flex-column align-items-center">
+            <h2 class="card-title" id="minutes">00</h2>
+            <h6 class="card-text">Minutes</h6>
         </div>
-        <div class="d-flex flex-column align-items-center">
-            <h3 class="card-title">Seconds</h3>
-            <h4 class="card-text" id="seconds">00</h4>
+        <div class="div-cards d-flex flex-column align-items-center">
+            <h2 class="card-title" id="seconds">00</h2>
+            <h6 class="card-text">Seconds</h6>
         </div>
     </div>
 

@@ -13,20 +13,22 @@ const updateCountdown = (remainTime) => {
     const minutes = Math.floor(remainTime / 1000 / 60) % 60
     const seconds = Math.floor(remainTime / 1000) % 60
 
-    monthsDiv.innerHTML = months
-    daysDiv.innerHTML = days
-    hoursDiv.innerHTML = hours
-    minutesDiv.innerHTML = minutes
-    secondsDiv.innerHTML = seconds
+    monthsDiv.innerHTML = months < 10 ? `0${months}` : months;
+    daysDiv.innerHTML = days < 10 ? `0${days}` : days;
+    hoursDiv.innerHTML = hours < 10 ? `0${hours}` : hours;
+    minutesDiv.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+    secondsDiv.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 }
 
 const getDate = () => {
-    const date = document.querySelector("#date").value;
-    const inputDate = new Date(`${date}T00:00:00`);
+
+    const inputDate = document.querySelector("#date").value;
+    console.log(inputDate);
+    const date = new Date(`${inputDate}T00:00:00`);
 
     setInterval(() => {
         const actualDate = new Date();
-        updateCountdown(inputDate - actualDate)
+        updateCountdown(date - actualDate)
     }, 1000)
 
 }
