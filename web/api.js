@@ -12,5 +12,8 @@ export const getInputDate = async () => {
     console.log(data);
     const inputDate = data.data.date
     console.log(inputDate);
+    const date = new Date(`${inputDate}T00:00:00`)
+    console.log(date);
+    return date
 }
 
