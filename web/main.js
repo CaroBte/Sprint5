@@ -1,3 +1,5 @@
+import { postInputDate, getInputDate } from "./api.js"
+
 console.log("Hello world");
 
 const monthsDiv = document.getElementById("months");
@@ -5,6 +7,7 @@ const daysDiv = document.getElementById("days");
 const hoursDiv = document.getElementById("hours");
 const minutesDiv = document.getElementById("minutes");
 const secondsDiv = document.getElementById("seconds");
+const btn = document.getElementById("btn")
 let interval
 
 const updateCountdown = (remainTime) => {
@@ -21,15 +24,23 @@ const updateCountdown = (remainTime) => {
     secondsDiv.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 }
 
-const getDate = () => {
+const postDate = () => {
     clearInterval(interval) //Stops interval
     const inputDate = document.querySelector("#date").value;
-    console.log(inputDate);
-    const date = new Date(`${inputDate}T00:00:00`);
+    postInputDate(inputDate);
 
-    interval = setInterval(() => {
+    /*     console.log(inputDate); */
+    /*     const date = new Date(`${inputDate}T00:00:00`); */
+
+    /*     interval = setInterval(() => {
         const actualDate = new Date();
         updateCountdown(date - actualDate)
-    }, 1000)
-
+    }, 1000) */
 }
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    postDate();
+})
+
+getInputDate();
