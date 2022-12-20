@@ -25,22 +25,14 @@ const updateCountdown = (remainTime) => {
 }
 
 const postDate = () => {
-    /*     clearInterval(interval) //Stops interval */
+
     const inputDate = document.querySelector("#date").value;
     postInputDate(inputDate);
-
-    /*     console.log(inputDate); */
-    /*     const date = new Date(`${inputDate}T00:00:00`); */
-
-    /*     interval = setInterval(() => {
-        const actualDate = new Date();
-        updateCountdown(date - actualDate)
-    }, 1000) */
 }
 
 btn.addEventListener("click", async (e) => {
     e.preventDefault();
-    clearInterval(interval) //Stops existent interval 
+    clearInterval(interval)
     postDate();
     let date = await getInputDate();
     console.log(date);
