@@ -18,6 +18,7 @@
   padding: 1.5vw;
   border-radius: 10px;
   margin-bottom: 1vw;
+  box-shadow: -1px 11px 8px -6px rgba(0, 0, 0, 0.75);
 }
 * body #count-down .card-text {
   font-size: 1vw;
@@ -38,6 +39,40 @@
   width: 100vw;
   height: 9.5vw;
   margin-top: 3vw;
+}
+
+@media (max-width: 800px) {
+  body #form-date h2 {
+    font-size: 5vw;
+    text-align: center;
+  }
+  body #count-down .card-title {
+    font-size: 6vw;
+  }
+  body #count-down .card-text {
+    font-size: 2vw;
+  }
+  body footer #social-media {
+    bottom: 1rem;
+  }
+}
+@media (max-width: 430px) {
+  body #form-date h2 {
+    font-size: 7vw;
+  }
+  body #count-down .card-title {
+    font-size: 10vw;
+  }
+  body #count-down .card-text {
+    font-size: 3vw;
+  }
+  body footer #social-media {
+    bottom: 0.2rem;
+  }
+  body footer #hills {
+    height: 20vw;
+    margin-top: 1vw;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
