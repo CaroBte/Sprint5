@@ -1,3 +1,4 @@
+import "./styles/styles.sass"
 import { postInputDate, getInputDate } from "./api.js"
 
 console.log("Hello world");
