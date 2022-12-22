@@ -24,16 +24,15 @@ const updateCountdown = (remainTime) => {
     secondsDiv.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 }
 
-const postDate = () => {
-
+const postDate = async () => {
     const inputDate = document.querySelector("#date").value;
-    postInputDate(inputDate);
+    await postInputDate(inputDate);
 }
 
 btn.addEventListener("click", async (e) => {
     e.preventDefault();
     clearInterval(interval)
-    postDate();
+    await postDate();
     let date = await getInputDate();
     console.log(date);
     interval = setInterval(() => {
